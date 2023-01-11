@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const Example = () => {
+export const Example = (): JSX.Element => {
     return(
         <div>
-            AHHHH
+            iqu3rgoiru
         </div>
     )
 }

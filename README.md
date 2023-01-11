@@ -44,13 +44,12 @@ tsconfig.json
 
 ```
 npm install --save-dev react react-dom
-npm install --save-dev @storybook/manager-webpack5 @storybook/builder-webpack5
-
+npx storybook init
 ```
 
-if the stories directory is made in your src folder, then just move it out a level to the root dir (makes it look cleaner)
+if the stories directory is made in your src folder, then just move it out a level to the root folder (makes it look cleaner)
 
-also you will have to modify your .storybook/main.js, if the stories dir was creates in your src folder, expected 
+also you will have to modify the `"stories" : [..]` in your .storybook/main.js, if the stories folder was created in your src folder and you moved it out a level. 
 
 ```
 module.exports = {
@@ -67,8 +66,20 @@ module.exports = {
 }
 ```
 
+add to package.json scripts
+
 ```
-export NODE_OPTIONS=--openssl-legacy-provider
+   "storybook": "export NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
+```
+
+```
 npm run storybook
 ```
 
+
+
+# Browser-sync
+
+```
+npm install --save-dev browser-sync
+```
